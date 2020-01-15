@@ -18,7 +18,7 @@ window.title("Rick and Morty Maaaaaaaaan")
 window.configure(background="black")
 
 #My photo
-photo1 = PhotoImage(file="me.gif")
+photo1 = PhotoImage(file="morty.gif")
 Label (window, image=photo1, bg="black") .grid(row=0, column=0, sticky=E)
 
 #create the label
@@ -43,4 +43,14 @@ my_compdictionary = {
     'rick': 'Wubbalubbadubdub!!!', 'tiny rick': "Yo, I'm tiny rick!!!", "morty": "aw geez", "mr. meeseeks": "OOOwweEE",
     'jerry': 'I"m lame Jerry', 'bird person': 'I"m bird person', 'mr. poopy butthole': 'I was murdered'
 }
+
+Label (window, text="Click to exit:", bg="black", fg="white", font="none 12 bold") .grid(row=7, column=0, sticky=W)
+
+def close_window():
+    window.destroy()
+    window.exit()
+
+Button(window, text="Exit", width=14, command=close_window) .grid(row=8, column=0, sticky=W)
+
+
 window.mainloop()
